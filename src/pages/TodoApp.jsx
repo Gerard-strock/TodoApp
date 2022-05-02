@@ -8,7 +8,7 @@ const init = () => {
   return JSON.parse(localStorage.getItem("todos")) || [];
 };
 
-const TodoApp = () => {
+export const TodoApp = () => {
   const [todos, dispatch] = useReducer(todoReducer, [], init);
 
   const [{ description }, handleInputChange, reset] = useForm({
